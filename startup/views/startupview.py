@@ -3,6 +3,10 @@ from ..models import StartupModel
 from ..serialization import StartupSerializer
 from rest_framework import viewsets
 
-class StartupListCreateViews(generics.ListCreateAPIView):
+class StartupViews(generics.ListCreateAPIView):
     queryset = StartupModel.objects.all()
     serializer_class = StartupSerializer
+
+class StartupView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = StartupModel.objects.all()
+    serializer_class = StartupSerializer 
