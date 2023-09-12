@@ -6,3 +6,9 @@ class StartupSerializer(serializers.ModelSerializers):
     class Meta:
         model = StartupModel
         fields = '__all__'
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserModel
+        fields = ['id', 'username', 'user_price']
+        
